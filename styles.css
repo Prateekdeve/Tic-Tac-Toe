@@ -1,0 +1,97 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    color:rgb(34, 170, 13)
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 315px;
+}
+
+/* Cell Editing */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: #b7b7f8;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.status {
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+.reset {
+    background-color:aqua;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ...existing CSS... */
+
+.cell {
+    /* ...your existing cell styles... */
+    transition: background-color 0.3s ease; /* Smooth transition for hover/active */
+}
+
+.cell:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.player-x {
+    color: #ff6347; /* Tomato red for X */
+    font-weight: bold;
+}
+
+.player-o {
+    color: #4682b4; /* Steel blue for O */
+    font-weight: bold;
+}
+
+.status {
+    /* ...your existing status styles... */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef; /* Light background for status */
+    margin-bottom: 20px; /* Add some space below status */
+}
+
+.reset {
+    /* ...your existing reset button styles... */
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.winning-cell {
+    background-color: #90ee90; /* Light green for winning cells */
+    animation: pulse 0.5s infinite alternate; /* Pulsing animation for winning cells */
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
